@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My jQuery Basic Assignment</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#fadeIn").hide();
+            $("#show").hide();
+            $("#slideDown").hide();
+            $("#slideToggle").hide();
+
+            $("#b1").click(function(){
+                $("#class").addClass("red");
+            })
+
+            $("#b2").click(function(){
+                $("#after").after("<b>Added via .after</b>");
+            })
+
+            $("#b3").click(function(){
+                $("#append").append("<b>Added via .append</b>");
+            })
+
+            $("#b4").click(function(){
+                console.log('data-alt-src value is', $(this).attr('data-alt-src'));
+            })
+
+            $("#b5").click(function(){
+                $("#before").before("<b>Added via .before</b>");
+            })
+
+            $("#b6").click(function(){
+                alert("You clicked the button");
+            })
+
+            $("#b7").click(function(){
+                $("#data").data("foo");
+                alert($("#data").data());
+            })
+
+            $("#b8").click(function(){
+                $("#fadeIn").fadeIn("slow");
+            })
+
+            $("#b9").click(function(){
+                $("#fadeOut").fadeOut("slow");
+            })
+
+            $("#b10").click(function(){
+                $("#hide").hide();
+            })
+
+            $("#b11").click(function(){
+                $("#html").html("Changed out via .html");
+            })
+
+            $("#b12").click(function(){
+                $("#show").show();
+            })
+
+            $("#b13").click(function(){
+                $("#slideDown").slideDown("slow");
+            })
+
+            $("#b14").click(function(){
+                $("#slideToggle").slideToggle("slow");
+            })
+
+            $("#b15").click(function(){
+                $("#slideUp").slideUp("slow", function(){
+
+                });
+            })
+
+            $("#b16").click(function(){
+                $("#text").text("Added via .text");
+            })
+
+            $("#b17").click(function(){
+                $("#toggle").toggle();
+            })
+            
+            $("#b18").click(function(){
+                console.log($("#val").val("Added via .val"));
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <h1>My jQuery Basic Assignment</h1>
+            <h3>A wireframe that shows jQuery methods</h3>
+        </header>
+
+        <article>
+            <h1>.addClass</h1>
+            <button id="b1">.addClass</button>
+
+            <p id="class">Click the button to add class "red" to this paragraph.</p>
+
+        </article>
+
+        <article>
+            <h1>.after</h1>
+            <button id="b2">.after</button>
+
+            <p id="after" data-alt-src= "ninja.png">Click the button to insert content, specified by the parameter, after each element in the set of matched elements</p>
+
+        </article>
+
+        <article>
+            <h1>.append</h1>
+            <button id="b3">.append</button>
+
+            <p id="append">Click the button to insert content, specified by the parameter, to the end of each element in the set of matched elements</p>
+
+        </article>
+
+        <article>
+            <h1>.attr</h1>
+            <button id="b4">.attr</button>
+
+            <p>Click the button to get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element (See in Console)</p>
+            <img src="img/shiro.jpg" data-alt-src="img/cat0.png">
+        </article>
+
+        <article>
+            <h1>.before</h1>
+            <button id="b5">.before</button>
+
+            <p id="before">Click the button to insert content, specified by the parameter, before each element in the set of matched elements</p>
+
+        </article>
+
+        <article>
+            <h1>.click</h1>
+            <button id="b6">.click</button>
+
+            <p>Click the button to see how .click binds an event handler to the "click" JavaScript event, or trigger that event on an element</p>
+
+        </article>
+
+        <article>
+            <h1>.data</h1>
+            <button id="b7">.data</button>
+
+            <p id="data">Click the button to store arbitrary data associated with the matched elements or return the value of the named data store for the first element in the set of matched elements</p>
+
+        </article>
+
+        <article>
+            <h1>.fadeIn</h1>
+            <button id="b8">.fadeIn</button>
+
+            <p>Click the button to display the matched elements by fading them to opaque</p>
+            <img id="fadeIn" src="img/shiro.jpg" alt="shiro.jpg">
+
+        </article>
+
+        <article>
+            <h1>.fadeOut</h1>
+            <button id="b9">.fadeOut</button>
+
+            <p>Click the button to hide the matched elements by fading them to transparent</p>
+            <img id="fadeOut" src="img/shiro.jpg" alt="shiro.jpg">
+
+        </article>
+
+        <article>
+            <h1>.hide</h1>
+            <button id="b10">.hide</button>
+
+            <p>Click the button to hide the matched elements</p>
+            <img id="hide" src="img/shiro.jpg" alt="shiro.jpg">
+
+        </article>
+
+        <article>
+            <h1>.html</h1>
+            <button id="b11">.html</button>
+
+            <p id="html">Click the button to get the HTML contents of the first element in the set of matched elements or set the HTML contents of every matched element</p>
+
+        </article>
+
+        <article>
+            <h1>.show</h1>
+            <button id="b12">.show</button>
+
+            <p>Click the button to display the matched elements</p>
+            <img id="show" src="img/shiro.jpg" alt="shiro.jpg">
+
+        </article>
+
+        <article>
+            <h1>.slideDown</h1>
+            <button id="b13">.slideDown</button>
+
+            <p>Click the button to display the matched elements in a sliding motion</p>
+            <img id="slideDown" src="img/shiro.jpg" alt="shiro.jpg">
+
+        </article>
+
+        <article>
+            <h1>.slideToggle</h1>
+            <button id="b14">.slideToggle</button>
+
+            <p>Click the button to display or hide the matched elements in a sliding motion</p>
+            <img id="slideToggle" src="img/shiro.jpg" alt="shiro.jpg">
+        </article>
+
+        <article>
+            <h1>.slideUp</h1>
+            <button id="b15">.slideUp</button>
+
+            <p>Click the button to display the matched elements with a sliding motion</p>
+            <img id="slideUp" src="img/shiro.jpg" alt="shiro.jpg">
+
+        </article>
+
+        <article>
+            <h1>.text</h1>
+            <button id="b16">.text</button>
+
+            <p id="text">Click the button to get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements</p>
+
+        </article>
+
+        <article>
+            <h1>.toggle</h1>
+            <button id="b17">.toggle</button>
+
+            <p id="toggle">Click the button to display or hide the matched elements</p>
+        </article>
+
+        <article>
+            <h1>.val</h1>
+            <button id="b18">.val</button>
+
+            <p id="val">Click the button to get the current value of the first element in the set of matched elements or set the value of every matched element</p>
+
+        </article>
+
+        <footer>
+            <p>jQuery documentation can be found: </p>
+            <a href="http://api.jquery.com/" target="_blank">here.</a>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

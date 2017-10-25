@@ -1,0 +1,48 @@
+.container{
+    margin: 0px auto;
+    padding: 0px;
+    width: 75%;
+    text-align: center;
+    background: lightseagreen;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header{
+    background: linear-gradient(darkcyan, lightseagreen, darkcyan);
+    padding: 10px;
+    color: white;
+}
+
+article{
+    background: white;
+    margin: 10px 20px;
+    padding: 15px;
+    border-bottom: 1px solid grey;
+}
+
+
+button{
+    height: 30px;
+    width: 150px;
+    border-radius: 5px;
+    background: lightcyan;
+}
+
+footer{
+    font-weight: bold;
+}
+footer p{
+    display: inline-block;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+img{
+    width: 150px;
+}
+
+.red{
+    color:red;
+}
